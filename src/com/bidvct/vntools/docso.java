@@ -47,7 +47,7 @@ public class docso {
         ArrayList<String> List_Num = Split(a, 3);
  
  
-        while (List_Num.size() != 0)
+        while (!List_Num.isEmpty())
         {      
             //Xét 3 số đầu tiên của chuổi (số đầu tiên của List_Num)
             switch (List_Num.size() % 3)
