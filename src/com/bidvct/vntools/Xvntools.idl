@@ -1,0 +1,27 @@
+/*
+ * Xvntools.idl
+ *
+ * Created on 2017.03.02 - 14:13:16
+ *
+ */
+
+#ifndef _com_bidvct_vntools_Xvntools_
+#define _com_bidvct_vntools_Xvntools_
+
+#include <com/sun/star/lang/XLocalizable.idl>
+
+#include <com/sun/star/uno/XInterface.idl>
+
+
+module com { module bidvct { module vntools {
+    interface Xvntools {
+        /// used to set an add-in locale for formatting reasons for example
+        [optional] interface ::com::sun::star::lang::XLocalizable;
+
+        string VND([in] string docso);
+
+        string USD([in] string so);
+    };
+}; }; };
+
+#endif

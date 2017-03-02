@@ -1,0 +1,17 @@
+/*
+ * vntools.idl
+ *
+ * Created on 2017.03.02 - 14:13:16
+ *
+ */
+
+#ifndef _com_bidvct_vntools_vntools_
+#define _com_bidvct_vntools_vntools_
+
+#include "Xvntools.idl"
+
+module com { module bidvct { module vntools {
+    service vntools : Xvntools;
+}; }; };
+
+#endif

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<oor:component-data xmlns:oor="http://openoffice.org/2001/registry" xmlns:xs="http://www.w3.org/2001/XMLSchema" oor:name="CalcAddIns" oor:package="org.openoffice.Office">
+    <node oor:name="AddInInfo">
+        <node oor:name="com.bidvct.vntools.vntools" oor:op="replace">
+            <node oor:name="AddInFunctions">
+                <node oor:name="VND" oor:op="replace">
+                    <prop oor:name="DisplayName">
+                        <value xml:lang="en">VND</value>
+                    </prop>
+                    <prop oor:name="Description">
+                        <value xml:lang="en">Đọc tiếng Việt</value>
+                    </prop>
+                    <prop oor:name="Category">
+                        <value>Add-In</value>
+                    </prop>
+                    <prop oor:name="CompatibilityName">
+                        <value xml:lang="en">VND</value>
+                    </prop>
+                    <node oor:name="Parameters">
+                        <node oor:name="docso" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">Số cần đọc</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                    </node>
+                </node>
+                <node oor:name="USD" oor:op="replace">
+                    <prop oor:name="DisplayName">
+                        <value xml:lang="en">USD</value>
+                    </prop>
+                    <prop oor:name="Description">
+                        <value/>
+                    </prop>
+                    <prop oor:name="Category">
+                        <value>Add-In</value>
+                    </prop>
+                    <prop oor:name="CompatibilityName">
+                        <value/>
+                    </prop>
+                    <node oor:name="Parameters">
+                        <node oor:name="so" oor:op="replace">
+                            <prop oor:name="DisplayName">
+                                <value xml:lang="en">so</value>
+                            </prop>
+                            <prop oor:name="Description">
+                                <value/>
+                            </prop>
+                        </node>
+                    </node>
+                </node>
+            </node>
+        </node>
+    </node>
+</oor:component-data>
