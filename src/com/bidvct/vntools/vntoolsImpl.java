@@ -48,10 +48,19 @@ public final class vntoolsImpl extends WeakBase
         // because of missing default initialization of primitive types of
         // some C++ compilers or different Any initialization in Java and C++
         // polymorphic structs.
-         ArrayList<String> kq = readNum(docso);
-         String result = new String();
-        for (int i = 0; i < kq.size(); i++) {
-          result +=  kq.get(i)+ " ";
+        String result = new String();
+        if(docso.isEmpty())
+        {
+            result = "Ô rỗng";
+        
+        } 
+        else
+        {
+            ArrayList<String> kq = readNum(docso);
+           
+           for (int i = 0; i < kq.size(); i++) {
+             result +=  kq.get(i)+ " ";
+           }
         }
         return result;
     }
@@ -63,14 +72,34 @@ public final class vntoolsImpl extends WeakBase
         // because of missing default initialization of primitive types of
         // some C++ compilers or different Any initialization in Java and C++
         // polymorphic structs.
-        return new String();
+        
+        
+        
+        String result = new String();
+        if(so.isEmpty())
+        {
+            result = "Ô rỗng";
+        
+        } 
+        else
+        {
+            Float num = new Float( so ) ;
+           int dollars = (int)Math.floor( num ) ;
+           int cent = (int)Math.floor( ( num - dollars ) * 100.0f ) ;
+
+           result = "" + EnglishNumberToWords.convert( dollars ) + " and "
+              + EnglishNumberToWords.convert( cent ) + " cents" ;
+        }
+        return result;
     }
 
     // com.sun.star.lang.XServiceInfo:
+    @Override
     public String getImplementationName() {
          return m_implementationName;
     }
 
+    @Override
     public boolean supportsService( String sService ) {
         int len = m_serviceNames.length;
 
@@ -81,16 +110,19 @@ public final class vntoolsImpl extends WeakBase
         return false;
     }
 
+    @Override
     public String[] getSupportedServiceNames() {
         return m_serviceNames;
     }
 
     // com.sun.star.lang.XLocalizable:
+    @Override
     public void setLocale(com.sun.star.lang.Locale eLocale)
     {
         m_locale = eLocale;
     }
 
+    @Override
     public com.sun.star.lang.Locale getLocale()
     {
         return m_locale;
