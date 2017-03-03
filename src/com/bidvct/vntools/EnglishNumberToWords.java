@@ -39,13 +39,13 @@ public class EnglishNumberToWords {
 		return numNames[number] + " hundred" + soFar;
 	}
 
-	public static String convert(long number) {
+	public static String convert( String number) {
 		// 0 to 999 999 999 999
-		if (number == 0) {
+		if ("0".equals(number)) {
 			return "zero";
 		}
 
-		String snumber = Long.toString(number);
+		String snumber = (number).trim();
 
 		// pad with "0"
 		String mask = "000000000000";
